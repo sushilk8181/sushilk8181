@@ -39,6 +39,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  const cvLink = document.getElementById('downloadCv');
+  if (cvLink) {
+    const cvText = `Susheel Singh\nSenior Software Engineer | IBM AS/400 Specialist\n\nContact\nEmail: mailtosusheelsingh@gmail.com\nPhone: +91 88601 55888\nLocation: India (global delivery)\n\nProfile\nSenior enterprise engineer with 20+ years in banking, insurance, and payments on IBM AS/400 (iSeries). Specialized in RPGLE modernization, DB2/400 optimization, and high-availability batch processing.\n\nCore Expertise\n- IBM i (AS/400) architecture and RPGLE development\n- DB2/400 performance tuning and batch automation\n- Banking & payment platforms, EOD/EOM operations\n- Release management and global stakeholder leadership\n\nRecent Experience\nSopra Banking Software (2014–2025) — Lead Engineer\nFiserv Global Services — Senior Developer\nHSBC GLTi — Systems Engineer\nSopra Group India — Release Manager\nANZ / Attra Infotech — Developer\n`;
+    const blob = new Blob([cvText], { type: 'text/plain' });
+    cvLink.href = URL.createObjectURL(blob);
+    cvLink.setAttribute('download', 'Susheel_Singh_CV.txt');
+  }
+
   const reveals = document.querySelectorAll('.reveal');
   const counters = document.querySelectorAll('[data-count]');
 
@@ -104,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const cursor = document.getElementById('cursor');
   if (cursor && !window.matchMedia('(pointer: coarse)').matches) {
+    document.body.classList.add('cursor-ready');
     let targetX = window.innerWidth / 2;
     let targetY = window.innerHeight / 2;
     let currentX = targetX;
@@ -138,6 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const ctx = canvas.getContext('2d');
     const fontSize = 16;
     const chars = ['0', '1'];
+    const MATRIX_RESET_PROBABILITY = 0.975;
     let columns = 0;
     let drops = [];
 
@@ -167,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const text = chars[Math.floor(Math.random() * chars.length)];
         const x = index * fontSize;
         ctx.fillText(text, x, y);
-        if (y > canvas.height && Math.random() > 0.975) {
+        if (y > canvas.height && Math.random() > MATRIX_RESET_PROBABILITY) {
           drops[index] = 0;
         } else {
           drops[index] = y + fontSize;
