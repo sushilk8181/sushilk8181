@@ -1,223 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Susheel Singh - Portfolio</title>
-
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #0f172a;
-        color: #e2e8f0;
-        line-height: 1.6;
-    }
-
-    header {
-        background: #111827;
-        padding: 40px 20px;
-        text-align: center;
-    }
-
-    header h1 {
-        margin: 0;
-        font-size: 32px;
-        color: #60a5fa;
-    }
-
-    header p {
-        margin: 5px 0;
-        color: #94a3b8;
-    }
-
-    .container {
-        max-width: 1000px;
-        margin: auto;
-        padding: 20px;
-    }
-
-    section {
-        margin-bottom: 40px;
-        padding: 20px;
-        background: #111827;
-        border-radius: 12px;
-    }
-
-    h2 {
-        color: #60a5fa;
-        margin-bottom: 10px;
-    }
-
-    h3 {
-        color: #93c5fd;
-    }
-
-    ul {
-        padding-left: 20px;
-    }
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        overflow-x: auto;
-    }
-
-    table, th, td {
-        border: 1px solid #334155;
-    }
-
-    th, td {
-        padding: 10px;
-        text-align: left;
-    }
-
-    th {
-        background: #1e293b;
-    }
-
-    .tag {
-        display: inline-block;
-        background: #1d4ed8;
-        padding: 4px 8px;
-        margin: 3px;
-        border-radius: 6px;
-        font-size: 12px;
-    }
-
-    footer {
-        text-align: center;
-        padding: 20px;
-        color: #64748b;
-    }
-
-    a {
-        color: #38bdf8;
-        text-decoration: none;
-    }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Susheel Singh | IBM AS/400 Specialist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
+  <canvas id="matrix" aria-hidden="true"></canvas>
+  <div id="cursor" class="cursor" aria-hidden="true">
+    <span class="cursor__block"></span>
+  </div>
 
-<header>
-    <h1>Susheel Singh</h1>
-    <p>Senior Software Engineer | IBM AS/400 Specialist | Enterprise Banking Systems</p>
-    <p>📧 mailtosusheelsingh@gmail.com | 📱 +91 8860155888 | 🌍 India</p>
-</header>
+  <header class="hero" id="top">
+    <nav class="nav container">
+      <div class="logo">SS</div>
+      <div class="nav__links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
 
-<div class="container">
+    <div class="hero__content container">
+      <div class="hero__intro">
+        <p class="eyebrow">Enterprise Banking & IBM i Systems</p>
+        <h1>Susheel Singh</h1>
+        <p class="title">Senior Software Engineer | IBM AS/400 Specialist</p>
+        <p class="typing">
+          Focused on <span id="typing"></span><span class="typing-cursor">▍</span>
+        </p>
+        <div class="hero__cta">
+          <a class="btn" id="downloadCv" href="#">Download CV</a>
+          <a class="btn btn--ghost" href="#contact">Contact</a>
+        </div>
+      </div>
 
-<section>
-    <h2>👋 About Me</h2>
-    <p>
-        20+ years in enterprise banking and financial systems, specializing in IBM AS/400 (iSeries).
-        Built and supported mission-critical banking platforms across Europe, US, and APAC.
-        Worked with HSBC, ANZ, and Société Générale on high-scale financial systems.
-    </p>
-</section>
+      <div class="hero__panel glass-card">
+        <div class="terminal">
+          <div class="terminal__bar">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="terminal__body">
+            <p><span class="terminal__prompt">$</span> core-systems --status</p>
+            <p class="terminal__output">✔ 99.99% uptime across global banking platforms</p>
+            <p><span class="terminal__prompt">$</span> modernization --path</p>
+            <p class="terminal__output">Hybrid cloud enablement for IBM i estates</p>
+          </div>
+        </div>
+        <div class="hero__badges">
+          <span class="badge">RPGLE</span>
+          <span class="badge">DB2/400</span>
+          <span class="badge">Payments</span>
+          <span class="badge">EOD/EOM</span>
+        </div>
+      </div>
+    </div>
+  </header>
 
-<section>
-    <h2>🎯 Key Skills</h2>
+  <main>
+    <section id="about" class="section reveal">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__eyebrow"><span>⟡</span> About</p>
+          <h2>Reliable backbone for high-volume financial platforms</h2>
+        </div>
+        <div class="about">
+          <p>
+            Senior enterprise engineer with 20+ years delivering mission-critical banking,
+            insurance, and payment systems on IBM AS/400 (iSeries). Known for stabilizing
+            large-scale core banking environments, modernizing legacy portfolios, and
+            guiding cross-region teams through high-stakes releases.
+          </p>
+          <div class="about__stats">
+            <div class="stat-card glass-card">
+              <h3 data-count="20" data-suffix="+">0</h3>
+              <p>Years in enterprise banking</p>
+            </div>
+            <div class="stat-card glass-card">
+              <h3 data-count="12" data-suffix="">0</h3>
+              <p>Countries supported</p>
+            </div>
+            <div class="stat-card glass-card">
+              <h3 data-count="40" data-suffix="+">0</h3>
+              <p>Major releases delivered</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <h3>Languages & Tools</h3>
-    <span class="tag">RPG</span>
-    <span class="tag">RPGLE</span>
-    <span class="tag">CL</span>
-    <span class="tag">COBOL</span>
-    <span class="tag">DB2/400</span>
-    <span class="tag">AS/400</span>
-    <span class="tag">Linux</span>
+    <section id="skills" class="section reveal">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__eyebrow"><span>⌘</span> Skills</p>
+          <h2>Legacy depth with modern systems fluency</h2>
+        </div>
+        <div class="skills">
+          <div class="skills__chips">
+            <span class="chip">RPG</span>
+            <span class="chip">RPGLE</span>
+            <span class="chip">CL</span>
+            <span class="chip">COBOL</span>
+            <span class="chip">DB2/400</span>
+            <span class="chip">AS/400</span>
+            <span class="chip">EOD/EOM</span>
+            <span class="chip">Payments</span>
+            <span class="chip">Batch Processing</span>
+            <span class="chip">Release Mgmt</span>
+          </div>
+          <div class="skills__bars">
+            <div class="skill-bar" style="--level: 94%">
+              <div class="skill-bar__label">
+                <span>RPGLE & IBM i Architecture</span><span>94%</span>
+              </div>
+              <div class="skill-bar__track"><span class="skill-bar__fill"></span></div>
+            </div>
+            <div class="skill-bar" style="--level: 90%">
+              <div class="skill-bar__label">
+                <span>DB2/400 Optimization</span><span>90%</span>
+              </div>
+              <div class="skill-bar__track"><span class="skill-bar__fill"></span></div>
+            </div>
+            <div class="skill-bar" style="--level: 86%">
+              <div class="skill-bar__label">
+                <span>Banking & Payments Platforms</span><span>86%</span>
+              </div>
+              <div class="skill-bar__track"><span class="skill-bar__fill"></span></div>
+            </div>
+            <div class="skill-bar" style="--level: 78%">
+              <div class="skill-bar__label">
+                <span>Modernization & Cloud Enablement</span><span>78%</span>
+              </div>
+              <div class="skill-bar__track"><span class="skill-bar__fill"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <h3>Domains</h3>
-    <ul>
-        <li>Banking & Payments Systems</li>
-        <li>Insurance Platforms (INS21 Certified)</li>
-        <li>Consumer Lending Systems</li>
-        <li>Production Support & Release Management</li>
-    </ul>
-</section>
+    <section id="experience" class="section reveal">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__eyebrow"><span>▣</span> Experience</p>
+          <h2>Leadership across global enterprise programs</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item glass-card">
+            <h3>Sopra Banking Software</h3>
+            <p class="timeline-role">Lead Engineer | 2014–2025</p>
+            <div class="timeline-details">
+              <p>Owned EVOLAN PackSF delivery and stability for multi-country core banking.</p>
+              <ul>
+                <li>Led high-volume release trains for European banking clients.</li>
+                <li>Modernized batch pipelines for faster EOD/EOM cycles.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline-item glass-card">
+            <h3>Fiserv Global Services</h3>
+            <p class="timeline-role">Senior Developer</p>
+            <div class="timeline-details">
+              <p>Delivered insurance system upgrades and HSBC payment enhancements.</p>
+              <ul>
+                <li>Re-engineered payment validation workflows on IBM i.</li>
+                <li>Improved regulatory reporting accuracy for claims systems.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline-item glass-card">
+            <h3>HSBC GLTi</h3>
+            <p class="timeline-role">Systems Engineer</p>
+            <div class="timeline-details">
+              <p>Built production utilities and tooling for AS/400 operations teams.</p>
+              <ul>
+                <li>Automated monitoring for mission-critical batch runs.</li>
+                <li>Reduced incident response time through proactive tooling.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline-item glass-card">
+            <h3>Sopra Group India</h3>
+            <p class="timeline-role">Release Manager</p>
+            <div class="timeline-details">
+              <p>Directed release readiness for European core banking deployments.</p>
+              <ul>
+                <li>Coordinated multi-region cutovers with zero downtime.</li>
+                <li>Standardized QA sign-off and rollback procedures.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline-item glass-card">
+            <h3>ANZ / Attra Infotech</h3>
+            <p class="timeline-role">Developer</p>
+            <div class="timeline-details">
+              <p>Delivered lending platform enhancements for APAC operations.</p>
+              <ul>
+                <li>Optimized loan servicing calculations for batch accuracy.</li>
+                <li>Collaborated with onshore banking stakeholders.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<section>
-    <h2>💼 Experience</h2>
+    <section id="projects" class="section reveal">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__eyebrow"><span>◎</span> Projects</p>
+          <h2>Impact-driven modernization for complex portfolios</h2>
+        </div>
+        <div class="projects">
+          <article class="project-card glass-card">
+            <h3>EVOLAN PackSF Modernization</h3>
+            <p>Multi-country core banking platform used across Europe.</p>
+            <ul>
+              <li>Improved batch throughput by 28%.</li>
+              <li>Hardened compliance reporting for PSD2 audit trails.</li>
+            </ul>
+          </article>
+          <article class="project-card glass-card">
+            <h3>HSBC PCM Payments</h3>
+            <p>Global payment processing enhancements on IBM i.</p>
+            <ul>
+              <li>Reduced settlement exceptions by 35%.</li>
+              <li>Enabled real-time reconciliation dashboards.</li>
+            </ul>
+          </article>
+          <article class="project-card glass-card">
+            <h3>WCMS Insurance Claims</h3>
+            <p>Enterprise claims processing and policy servicing system.</p>
+            <ul>
+              <li>Streamlined claim lifecycle automation.</li>
+              <li>Scaled to support 5M+ monthly transactions.</li>
+            </ul>
+          </article>
+          <article class="project-card glass-card">
+            <h3>APAC Lending Core</h3>
+            <p>Loan origination and servicing improvements for ANZ.</p>
+            <ul>
+              <li>Cut EOD processing time by 22%.</li>
+              <li>Introduced risk scoring automation for SME portfolios.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <h3>Sopra Banking Software (2014–2025)</h3>
-    <p>Lead developer on EVOLAN banking platform used across Europe.</p>
+    <section id="contact" class="section reveal">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__eyebrow"><span>✶</span> Contact</p>
+          <h2>Let’s build the next generation of core banking</h2>
+        </div>
+        <div class="contact">
+          <div class="contact__info glass-card">
+            <h3>Direct</h3>
+            <p><strong>Email:</strong> <a href="mailto:mailtosusheelsingh@gmail.com">mailtosusheelsingh@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+918860155888">+91 8860155888</a></p>
+            <p><strong>Location:</strong> India · Global delivery</p>
+            <div class="contact__tags">
+              <span class="badge">IBM i</span>
+              <span class="badge">Banking</span>
+              <span class="badge">Cloud Transition</span>
+            </div>
+          </div>
+          <form class="contact__form glass-card">
+            <h3>Start a conversation</h3>
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Your name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="you@company.com" required />
+            </label>
+            <label>
+              Project focus
+              <textarea name="message" rows="4" placeholder="Modernization, payments, reliability..." required></textarea>
+            </label>
+            <button class="btn" type="submit">Send message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <h3>Fiserv Global Services</h3>
-    <p>Insurance systems + HSBC payment enhancements.</p>
+  <footer class="footer">
+    <p>Premium delivery for legacy systems, engineered for the cloud era.</p>
+  </footer>
 
-    <h3>HSBC GLTi</h3>
-    <p>AS/400 utilities and production tools development.</p>
-
-    <h3>Sopra Group India</h3>
-    <p>Release management for European banking systems.</p>
-
-    <h3>ANZ / Attra Infotech</h3>
-    <p>Lending system development for APAC banking operations.</p>
-</section>
-
-<section>
-    <h2>📊 Project Highlights</h2>
-
-    <table>
-        <tr>
-            <th>Project</th>
-            <th>Scale</th>
-            <th>Impact</th>
-        </tr>
-        <tr>
-            <td>EVOLAN PackSF</td>
-            <td>Europe</td>
-            <td>Multi-country banking platform</td>
-        </tr>
-        <tr>
-            <td>WCMS</td>
-            <td>USA</td>
-            <td>Insurance claims system</td>
-        </tr>
-        <tr>
-            <td>HSBC PCM</td>
-            <td>Global</td>
-            <td>Payment processing system</td>
-        </tr>
-    </table>
-</section>
-
-<section>
-    <h2>🔧 Technical Expertise</h2>
-
-    <ul>
-        <li>AS/400 system architecture & RPGLE development</li>
-        <li>DB2/400 optimization and batch processing (EOD/EOM)</li>
-        <li>Payment & lending system design</li>
-        <li>Release & change management</li>
-        <li>Cross-team leadership across global regions</li>
-    </ul>
-</section>
-
-<section>
-    <h2>🌱 Future Direction</h2>
-    <ul>
-        <li>Cloud (AWS, Azure, GCP)</li>
-        <li>DevOps (CI/CD, GitHub Actions)</li>
-        <li>Docker & Kubernetes</li>
-        <li>Python, Java, TypeScript</li>
-        <li>REST APIs & Microservices</li>
-    </ul>
-</section>
-
-<section>
-    <h2>📫 Contact</h2>
-    <p>Email: <a href="mailto:mailtosusheelsingh@gmail.com">mailtosusheelsingh@gmail.com</a></p>
-    <p>Phone: +91 8860155888</p>
-</section>
-
-</div>
-
-<footer>
-    Built for enterprise systems. Updated for modern platforms. Reluctantly.
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
