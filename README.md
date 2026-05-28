@@ -1,16 +1,14 @@
-## Hi there 👋
+## 🧾 Susheel Kumar Singh
 
-<!--
-**sushilk8181/sushilk8181** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Senior Software Engineer with **20+ years of experience** in enterprise banking and financial systems, specializing in **IBM AS/400 (iSeries)** development.
 
-Here are some ideas to get you started:
+Extensive background in building and maintaining **mission-critical banking, insurance, and payment systems** across Europe, US, and APAC regions for global institutions like HSBC, ANZ, and Société Générale.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Core strengths include:
+- AS/400 system architecture & RPGLE development  
+- Banking & financial transaction systems  
+- Production support, release management, and EOD/EOM processing  
+- Cross-geography technical leadership and mentoring  
+- Large-scale enterprise system reliability and delivery  
+
+Currently focused on transitioning toward **modern cloud-native technologies, DevOps practices, and microservices architectures** while leveraging deep legacy system expertise.
