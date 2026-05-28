@@ -1,7 +1,8 @@
 :root {
   --bg: #05070f;
   --bg-deep: #020409;
-  --panel: linear-gradient(140deg, rgba(15, 23, 42, 0.82), rgba(5, 8, 20, 0.7));
+  --panel: rgba(15, 23, 42, 0.78);
+  --panel-gradient: linear-gradient(140deg, rgba(15, 23, 42, 0.82), rgba(5, 8, 20, 0.7));
   --panel-strong: rgba(15, 23, 42, 0.9);
   --accent: #60a5fa;
   --accent-strong: #38bdf8;
@@ -209,7 +210,7 @@ h1 {
 }
 
 .glass-card {
-  background: var(--panel);
+  background: var(--panel-gradient);
   border: 1px solid var(--border);
   border-radius: 20px;
   padding: 24px;
@@ -404,7 +405,7 @@ h1 {
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: 8px;
+  left: 9px;
   top: 26px;
   width: 16px;
   height: 16px;
@@ -570,7 +571,7 @@ body.cursor-ready .cursor {
   }
 
   .timeline-item::before {
-    left: 4px;
+    left: 5px;
   }
 }
 
